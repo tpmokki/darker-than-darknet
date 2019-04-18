@@ -1,6 +1,5 @@
 from ctypes import *
-import math
-import random
+import math, random
 
 def sample(probs):
     s = sum(probs)
