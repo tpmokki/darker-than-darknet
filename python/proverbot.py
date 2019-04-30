@@ -35,3 +35,4 @@ def predict_tactics(net, s, n):
 net = load_net("cfg/coq.test.cfg", "/home/pjreddie/backup/coq.backup", 0)
 t = predict_tactics(net, "+++++\n", 10)
 print t
+print 'tee'
