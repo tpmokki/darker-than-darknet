@@ -177,7 +177,6 @@ void reconstruct_picture(network *net, float *features, image recon, image updat
     }
 }
 
-/*
 void run_lsd(int argc, char **argv)
 {
     srand(0);
@@ -283,7 +282,6 @@ void run_lsd(int argc, char **argv)
         im = resized;
     }
 }
-*/
 
 void run_nightmare(int argc, char **argv)
 {
