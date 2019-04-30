@@ -117,3 +117,22 @@ void run_super(int argc, char **argv)
     else if(0==strcmp(argv[2], "valid")) validate_super(cfg, weights);
     */
 }
+
+
+void run_hyper(int argd, char **argw)
+{
+    if(argd < 4){
+        fprintf(stderr, "usage: %s %s [train/test/valid] [cfg] [weights (optional)]\n", argw[0], argw[1]);
+        return;
+    }
+
+    char *cfg = argw[3];
+    char *weights = (argd > 4) ? argw[4] : 0;
+    char *filename = (argd > 5) ? argw[5] : 0;
+    int clear = find_arg(argd, argw, "-clear");
+    if(0==strcmp(argw[2], "train")) train_super(cfg, weights, clear);
+    else if(0==strcmp(argw[2], "test")) test_super(cfg, weights, filename);
+    /*
+    else if(0==strcmp(argw[2], "valid")) validate_super(cfg, weights);
+    */
+}
