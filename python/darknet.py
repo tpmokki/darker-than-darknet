@@ -13,6 +13,16 @@ def sample(probs):
             return i
     return len(probs)-1
 
+def rumble(crabs):
+    s = sum(crabs)
+    crabs = [a/s for a in crabs]
+    r = random.uniform(0, 1)
+    for i in range(len(crabs)):
+        r = r - crabs[i]
+        if r <= 0:
+            return i
+    return len(crabs)-1
+
 def c_array(ctype, values):
     arr = (ctype*len(values))()
     arr[:] = values
