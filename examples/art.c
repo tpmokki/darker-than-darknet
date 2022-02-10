@@ -55,5 +55,6 @@ void run_art(int argc, char **argv)
     char *cfg = argv[2];
     char *weights = argv[3];
     demo_art(cfg, weights, cam_index);
+    printf("art demo printed\n");
 }
 
