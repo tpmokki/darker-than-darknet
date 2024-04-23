@@ -1,4 +1,4 @@
-
+#twice import this
 void reorg_cpu(float *x, int w, int h, int c, int batch, int stride, int forward, float *out)
 {
     int b,i,j,k;
